@@ -88,3 +88,24 @@ p{
     font-size: 20px;
   }
 }
+
+.partsGrid{
+  display: grid;
+  grid-template-columns: minmax(8vw,1fr) minmax(auto,1088px) minmax(8vw,1fr);
+}
+.partsGrid > *{
+  grid-column: 2;
+}
+.grid12{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-column-gap: 10px;
+}
+.grid12 > *{
+  grid-column: 1/-1;
+}
+@media (min-width: 768px) {
+  .grid12 {
+    grid-template-columns: repeat(12, 1fr);
+  }
+}
