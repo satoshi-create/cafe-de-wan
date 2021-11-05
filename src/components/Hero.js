@@ -66,6 +66,13 @@ margin-top: -120px;
       transform: rotate(-36deg);
       padding-left:60px;
       padding-top: 20px;
+      @media (min-width: 768px){
+        font-size: 105px;
+    }
+    }
+    @media (min-width: 1024px){
+      padding-top: 140px;
+      padding-left: 80px;
     }
     }
 
