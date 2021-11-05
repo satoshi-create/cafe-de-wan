@@ -111,4 +111,55 @@ p{
   }
 }
 
-/* セクション */
+/*
+=============== 
+section styles
+===============
+*/
+/* section-title */
+.section-title{
+  margin-bottom: 50px;
+}
+.section-title .underline{
+  border-top: 5px dotted var(--clr-orange);
+  width: 120px;
+  padding-top: 5px;
+}
+/* odd */
+.section-title.odd h2{
+  display: grid;
+  grid-template-columns: 48px auto;
+  align-items: center;
+  grid-column-gap: 15px;
+}
+.section-title.odd h2::before{
+    content: url("../images/nikukyu-orange.svg");
+    display: block;
+}
+.section-title.odd .underline{
+  margin-left: 70px;
+}
+.section-title.odd h3{
+  margin-left: 70px;
+}
+/* even */
+.section-title.even{
+  justify-self: flex-end;
+}
+.section-title.even h2{
+  display: grid;
+  grid-template-columns: auto 48px;
+  align-items: center;
+  grid-column-gap: 15px;
+}
+.section-title.even h2::after{
+  content: url("../images/nikukyu-orange.svg");
+  display: block;
+}
+.section-title.even .underline{
+  margin-left: 100px;
+}
+.section-title.even h3{
+  margin-left: 70px;
+}
+

@@ -4,44 +4,17 @@ import Layout from '../components/Layout';
 import Hero from '../components/Hero';
 import logo from "../images/logo.svg";
 import Msg from '../components/Msg';
+import Dogs from '../components/Dogs';
+import News from '../components/News';
 
 
 const index = () => {
   return (
     <Layout>
-      <Hero/>
+      <Hero />
       <Msg />
-      <section className="dogs">
-        <div className="section-title">
-          <h2>OUR FAMILY</h2>
-          <h3>私たちの大切なパートナーです</h3>
-          <img alt="fukidashi" />
-        </div>
-        <div className="dog-photo">
-          <img alt="dog" />
-          <img alt="dog" />
-          <img alt="dog" />
-          <img alt="dog" />
-          <img alt="dog" />
-          <img alt="dog" />
-        </div>
-      </section>
-      <section className="news">
-        <div className="section-title">
-          <h2>NEWS</h2>
-          <h3>店舗の最新情報です</h3>
-        </div>
-        <dl>
-          <dt>2020年2月1日</dt>
-          <dd>私たちのパートナーに、ミニチュアダックスフンドのワンが仲間いりしました</dd>
-          <dt>2020年2月1日</dt>
-          <dd>私たちのパートナーに、ミニチュアダックスフンドのワンが仲間いりしました</dd>
-          <dt>2020年2月1日</dt>
-          <dd>私たちのパートナーに、ミニチュアダックスフンドのワンが仲間いりしました</dd>
-          <dt>2020年2月1日</dt>
-          <dd>私たちのパートナーに、ミニチュアダックスフンドのワンが仲間いりしました</dd>
-        </dl>
-      </section>
+      <Dogs />
+      <News />
       <aside className="info">
         <div className="section-title">
           <h2>INFO</h2>
