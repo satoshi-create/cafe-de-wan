@@ -1,19 +1,14 @@
 import { Link } from 'gatsby'
 import React from 'react'
 import Layout from '../components/Layout';
+import Hero from '../components/Hero';
 import logo from "../images/logo.svg";
-import scrollIcon from "../images/scroll_icon.svg";
+
 
 const index = () => {
   return (
     <Layout>
-      <section className="hero">
-        <h1>CAFE DE WAN</h1>
-        <img src={scrollIcon} alt="scroll-icon" />
-        <figure>
-          <img alt="hero-img" />
-        </figure>
-      </section>
+      <Hero/>
       <section className="msg">
         <div className="section-title">
           <h2>OUR CAFE</h2>
