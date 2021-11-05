@@ -3,26 +3,14 @@ import React from 'react'
 import Layout from '../components/Layout';
 import Hero from '../components/Hero';
 import logo from "../images/logo.svg";
+import Msg from '../components/Msg';
 
 
 const index = () => {
   return (
     <Layout>
       <Hero/>
-      <section className="msg">
-        <div className="section-title">
-          <h2>OUR CAFE</h2>
-          <h3>駅から徒歩2分、お洒落で清潔なカフェです</h3>
-        </div>
-        <p>パートナーの犬6匹とともに
-          皆様の憩いの場となれるカフェを運営しています。
-          店内には、犬と触れ合えるスペースを
-          広く設けております。お一人で、家族で
-          ごゆっくりおくつろぎください。
-        </p>
-        <img alt="cafe_interior" />
-        <img alt="cafecup" />
-      </section>
+      <Msg />
       <section className="dogs">
         <div className="section-title">
           <h2>OUR FAMILY</h2>

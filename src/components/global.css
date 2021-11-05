@@ -89,6 +89,7 @@ p{
   }
 }
 
+/* グリットレイアウト */
 .partsGrid{
   display: grid;
   grid-template-columns: minmax(8vw,1fr) minmax(auto,1088px) minmax(8vw,1fr);
@@ -109,3 +110,5 @@ p{
     grid-template-columns: repeat(12, 1fr);
   }
 }
+
+/* セクション */
