@@ -73,7 +73,7 @@ const Dogs = () => {
 
 const Wrapper = styled.section`
 background-color: var(--clr-light-orange);
-padding:125px 0 115px 0;
+padding:125px 0 454px 0;
 position: relative;
 z-index:-1;
 .grid12{
@@ -99,8 +99,11 @@ z-index:-1;
       justify-self: flex-start;
     }
     .dogs-img:nth-child(6){
-      margin-right: 70px;
       justify-self: center;
+    }
+    .dogs-img:nth-child(7){
+      margin-right: 70px;
+      justify-self: flex-end;
     }
   }
 }

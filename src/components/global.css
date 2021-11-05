@@ -121,7 +121,8 @@ section styles
   margin-bottom: 50px;
 }
 .section-title .underline{
-  border-top: 5px dotted var(--clr-orange);
+  border-top: 5px dotted;
+  color: var(--clr-orange);
   width: 120px;
   padding-top: 5px;
 }
