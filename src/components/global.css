@@ -144,7 +144,10 @@ section styles
 }
 /* even */
 .section-title.even{
+  grid-row: 1;
   justify-self: flex-end;
+  z-index: 2;
+  /* background-image: url("../images/fukidashi.svg"); */
 }
 .section-title.even h2{
   display: grid;
@@ -157,7 +160,7 @@ section styles
   display: block;
 }
 .section-title.even .underline{
-  margin-left: 100px;
+  margin-left: 130px;
 }
 .section-title.even h3{
   margin-left: 70px;

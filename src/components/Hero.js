@@ -31,7 +31,7 @@ const Hero = () => {
 const Wrapper = styled.section`
 position: relative;
 height: 100vh;
-margin-top: -120px;
+margin-top: -7.5rem;
   .hero-img{
     height: 100%;
   }
