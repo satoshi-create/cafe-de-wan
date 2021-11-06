@@ -1,12 +1,16 @@
-import React,{useContext} from 'react'
+import React, { useContext } from 'react'
 import styled from 'styled-components'
 import { StaticImage } from 'gatsby-plugin-image'
 import fukidashiSp from '../images/fukidashi-sp.svg'
 import fukidashiPc from '../images/fukidashi-pc.svg'
 import { GatsbyContext } from '../context/context'
+import dogs from "../constants/dogs";
+import asiato from '../images/asiato.svg'
 
 const Dogs = () => {
-  const { openModal } = useContext(GatsbyContext)
+  const { openModal, setValue, value } = useContext(GatsbyContext)
+  const { id, name, src, style } = dogs[value]
+
   return (
     <Wrapper className="partsGrid">
       <div className="grid12">
@@ -15,14 +19,21 @@ const Dogs = () => {
           <div className="underline"></div>
           <h3>私たちの大切な<br />パートナーです</h3>
         </div>
-        <button className="btn" onClick={openModal}>
-          <StaticImage
-            src="../images/moal.jpg"
-            placeholder="tracedSVG"
-            className="dogs-img"
-            alt="moal"
-          />
-        </button>
+        {dogs.map((dog, index) => {
+          const { id, name, src } = dog
+          return (
+            <button 
+              className="btn dog-fig"
+              onClick={()=>openModal(index)}
+              key={id}
+            >
+              <img 
+                src={src}
+                alt={name}
+                className="dog-img" />
+            </button>
+          )
+        })}
       </div>
       <div class="custom-shape-divider-top-1636126753">
         <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -44,41 +55,43 @@ const Wrapper = styled.section`
 background-color: var(--clr-light-orange);
 padding:125px 0 454px 0;
 position: relative;
+overflow: hidden;
 .grid12{
   row-gap: 22px;
   position: relative;
-  .dogs-img:nth-child(odd){
+  .dog-fig:nth-child(odd){
     justify-self: flex-end;
   }
   @media (min-width: 768px) {
     .section-title.even{
       margin-bottom: 0px;
     }
-    .dogs-img:not(:first-child){
+    .dog-fig:not(:first-child){
       margin-top:-80px;
     }
-    .dogs-img:nth-child(2){
+    .dog-fig:nth-child(2){
       grid-row: 3/4;
       justify-self: flex-start;
     }
-    .dogs-img:nth-child(3){
+    .dog-fig:nth-child(3){
+      z-index:2;
       justify-self: center;
     }
-    .dogs-img:nth-child(4){
+    .dog-fig:nth-child(4){
       justify-self:flex-end;
     }
-    .dogs-img:nth-child(5){
+    .dog-fig:nth-child(5){
       grid-row: 6/7;
       justify-self: flex-start;
     }
-    .dogs-img:nth-child(6){
+    .dog-fig:nth-child(6){
       justify-self: center;
     }
-    .dogs-img:nth-child(7){
+    .dog-fig:nth-child(7){
       margin-right: 70px;
       justify-self: flex-end;
     }
-  }&::before{
+  }&:before{
   content: url(${fukidashiSp});
   display: block;
   position: absolute;
@@ -90,7 +103,14 @@ position: relative;
     top: -140px;
     right: -110px;
   }
-}
+  }
+  &:after{
+      content: url(${asiato});
+      display: block;
+      position: absolute;
+      bottom:-90px;
+      left:0;
+  }
 }
 .fukidashi{
   position:absolute;
@@ -106,7 +126,7 @@ position: relative;
     top: 30px;
   }
 }
-.dogs-img{
+.dog-img{
   width: 190px;
   height: 190px;
   border-radius: 50%;

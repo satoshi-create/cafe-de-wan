@@ -48,6 +48,7 @@ const Msg = () => {
 }
 
 const Wrapper = styled.section`
+overflow: hidden;
 padding-top: 80px;
 p{
   margin-bottom: 55px;
@@ -61,6 +62,7 @@ p{
       background:#fff;
       box-shadow: 1px 1px 5px rgba(20,20,20,0.2);
       overflow: hidden;
+      margin-bottom: 40px;
 }
 .flame01{
       grid-row: 4;
@@ -82,6 +84,9 @@ p{
     grid-row: 2;
     grid-column: 2/7;
 
+  }
+  .flame{
+    margin-bottom: 0;
   }
   .flame01{
     grid-row: 1/3;

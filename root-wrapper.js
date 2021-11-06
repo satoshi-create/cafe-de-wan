@@ -1,6 +1,7 @@
 import React from 'react'
 import { createGlobalStyle } from 'styled-components'
 import { GatsbyProvider } from './src/context/context'
+import nikukyu from "./src/images/nikukyu-orange.svg"
 
 const GlobalStyle = createGlobalStyle`
 
@@ -141,7 +142,7 @@ section styles
   grid-column-gap: 15px;
 }
 .section-title.odd h2::before{
-    content: url("../images/nikukyu-orange.svg");
+    content: url(${nikukyu});
     display: block;
 }
 .section-title.odd .underline{
@@ -164,7 +165,7 @@ section styles
   grid-column-gap: 15px;
 }
 .section-title.even h2::after{
-  content: url("../images/nikukyu-orange.svg");
+  content:  url(${nikukyu});
   display: block;
 }
 .section-title.even .underline{
