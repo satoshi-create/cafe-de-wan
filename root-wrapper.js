@@ -1,3 +1,9 @@
+import React from 'react'
+import { createGlobalStyle } from 'styled-components'
+import { GatsbyProvider } from './src/context/context'
+
+const GlobalStyle = createGlobalStyle`
+
 /*
 =============== 
 Font
@@ -20,6 +26,7 @@ Variables
   --site-font:'Dancing Script', cursive;
   --title-font:'Josefin Sans', sans-serif;
   --subtitle-font:'Noto Sans JP', sans-serif;
+  --transition:all 0.3s linear;
 }
 /*
 =============== 
@@ -167,3 +174,24 @@ section styles
   margin-left: 70px;
 }
 
+.btn{
+  border: none;
+  background: none;
+  justify-self: flex-start;
+  cursor: pointer;
+  display: inline-block;
+}
+.btn:hover{
+  opacity: 0.6;
+  transition: var(--transition);
+}
+
+`
+export const wrapRootElement = ({ element }) => {
+  return (
+    <>
+      <GlobalStyle />
+      <GatsbyProvider>{element}</GatsbyProvider>
+    </>
+  )
+}

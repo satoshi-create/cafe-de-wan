@@ -35,7 +35,6 @@ margin-top: -340px;
   margin: 0 -20px;
   @media (min-width: 768px) {
     padding: 30px 30px 70px;
-    margin: 0 -30px;
     }
 }
 dl{

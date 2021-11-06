@@ -15,6 +15,8 @@ const Footer = () => {
 const Wrapper = styled.footer`
 background-color: var(--clr-black);
 height: 224px;
+display: grid;
+place-content: center;
   p{
     color:var(--clr-white);
     font-size: 13px;

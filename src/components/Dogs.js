@@ -1,59 +1,28 @@
-import React from 'react'
+import React,{useContext} from 'react'
 import styled from 'styled-components'
 import { StaticImage } from 'gatsby-plugin-image'
 import fukidashiSp from '../images/fukidashi-sp.svg'
 import fukidashiPc from '../images/fukidashi-pc.svg'
+import { GatsbyContext } from '../context/context'
 
 const Dogs = () => {
+  const { openModal } = useContext(GatsbyContext)
   return (
     <Wrapper className="partsGrid">
-      {/* <StaticImage
-        src="../images/fukidashi.svg"
-        placeholder="tracedSVG"
-        className="fukidashi"
-        alt="fukidashi-icon"
-      /> */}
       <div className="grid12">
         <div className="section-title even">
           <h2>OUR FAMILY</h2>
           <div className="underline"></div>
           <h3>私たちの大切な<br />パートナーです</h3>
         </div>
-        <StaticImage
-          src="../images/moal.jpg"
-          placeholder="tracedSVG"
-          className="dogs-img"
-          alt="moal"
-        />
-        <StaticImage
-          src="../images/sasuke.jpg"
-          className="dogs-img"
-          alt="sasuke"
-        />
-        <StaticImage
-          src="../images/gb.jpg"
-          placeholder="tracedSVG"
-          className="dogs-img"
-          alt="gb"
-        />
-        <StaticImage
-          src="../images/reika.jpg"
-          placeholder="tracedSVG"
-          className="dogs-img"
-          alt="reika"
-        />
-        <StaticImage
-          src="../images/rocket.jpg"
-          placeholder="tracedSVG"
-          className="dogs-img"
-          alt="rocket"
-        />
-        <StaticImage
-          src="../images/ridhia.jpg"
-          placeholder="tracedSVG"
-          className="dogs-img"
-          alt="ridha"
-        />
+        <button className="btn" onClick={openModal}>
+          <StaticImage
+            src="../images/moal.jpg"
+            placeholder="tracedSVG"
+            className="dogs-img"
+            alt="moal"
+          />
+        </button>
       </div>
       <div class="custom-shape-divider-top-1636126753">
         <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -74,7 +43,6 @@ const Dogs = () => {
 const Wrapper = styled.section`
 background-color: var(--clr-light-orange);
 padding:125px 0 454px 0;
-z-index:-1;
 position: relative;
 .grid12{
   row-gap: 22px;
@@ -143,7 +111,7 @@ position: relative;
   height: 190px;
   border-radius: 50%;
   border: 8px solid white;
-    box-shadow: 1px 1px 5px rgba(20,20,20,0.2);
+  box-shadow: 1px 1px 5px rgba(20,20,20,0.2);
 }
 .wave-top{
   grid-column: 1/-1;

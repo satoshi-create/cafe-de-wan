@@ -7,6 +7,7 @@ import Msg from '../components/Msg';
 import Dogs from '../components/Dogs';
 import News from '../components/News';
 import Info from '../components/Info';
+import Modal from '../components/Modal';
 
 
 const index = () => {
