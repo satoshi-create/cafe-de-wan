@@ -7,7 +7,6 @@ const Footer = () => {
     <Wrapper className="partsGrid">
       <div className="grid12">
         <p>©2021 cafe de WON all right reserved</p>
-        <img src={nikukyuWhite} alt="nikukyu-white" />
       </div>
     </Wrapper>
   )
@@ -21,14 +20,14 @@ height: 224px;
     font-size: 13px;
     align-self: end;
     justify-self: center;
+    position: relative;
+      &::after{
+      content: url(${nikukyuWhite});
+      position: absolute;
+      bottom: -70px;
+      right: -30px;
   }
-  img{
-    justify-self: right;
-    align-self: flex-start;
-    @media (min-width: 768px) {
-      grid-column: 9/10;
   }
-}
 `
 
 

@@ -1,18 +1,18 @@
 import React from 'react'
 import styled from 'styled-components'
 import { StaticImage } from 'gatsby-plugin-image'
-import dogs from '../constants/dogs'
-import waveTop from '../images/wave-top.svg'
+import fukidashiSp from '../images/fukidashi-sp.svg'
+import fukidashiPc from '../images/fukidashi-pc.svg'
 
 const Dogs = () => {
   return (
     <Wrapper className="partsGrid">
-      <StaticImage
+      {/* <StaticImage
         src="../images/fukidashi.svg"
         placeholder="tracedSVG"
         className="fukidashi"
         alt="fukidashi-icon"
-      />
+      /> */}
       <div className="grid12">
         <div className="section-title even">
           <h2>OUR FAMILY</h2>
@@ -74,18 +74,23 @@ const Dogs = () => {
 const Wrapper = styled.section`
 background-color: var(--clr-light-orange);
 padding:125px 0 454px 0;
-position: relative;
 z-index:-1;
+position: relative;
 .grid12{
   row-gap: 22px;
+  position: relative;
   .dogs-img:nth-child(odd){
     justify-self: flex-end;
   }
   @media (min-width: 768px) {
+    .section-title.even{
+      margin-bottom: 0px;
+    }
     .dogs-img:not(:first-child){
-      margin-top:-100px;
+      margin-top:-80px;
     }
     .dogs-img:nth-child(2){
+      grid-row: 3/4;
       justify-self: flex-start;
     }
     .dogs-img:nth-child(3){
@@ -105,7 +110,19 @@ z-index:-1;
       margin-right: 70px;
       justify-self: flex-end;
     }
+  }&::before{
+  content: url(${fukidashiSp});
+  display: block;
+  position: absolute;
+  top: -100px;
+  right: -60px;
+  z-index:1;
+  @media (min-width: 768px){
+    content: url(${fukidashiPc});
+    top: -140px;
+    right: -110px;
   }
+}
 }
 .fukidashi{
   position:absolute;

@@ -6,6 +6,13 @@ import { StaticImage } from 'gatsby-plugin-image'
 const Info = () => {
   return (
     <Wrapper>
+      <StaticImage
+        src="../images/cafe-exterior.jpg"
+        layout="fullWidth"
+        placeholder="tracedSVG"
+        className="bg"
+        alt="dog-moal"
+      />
       <div className="partsGrid">
         <div className="section-title">
           <h2>INFO</h2>
@@ -43,25 +50,24 @@ const Info = () => {
 
 const Wrapper = styled.section`
 margin-top: 70px;
-padding-top: 50px;
-padding-bottom: 90px;
-background-image: url(${cafeExteriorImg});
-background-size: cover;
-color: var(--clr-white);
 position: relative;
-height: 90vh;
-@media (min-width: 768px) {
-      height: 60vh;
-    }
-.partsGrid{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+height: 750px;
+.bg{
   height: 100%;
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
-  display: grid;
-  place-content: center;
+}
+.partsGrid{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding-top: 50px;
+    padding-bottom: 90px;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+    color: var(--clr-white);
+    display: grid;
+    place-content: center;
+    place-items: center;
   .section-title{
     text-align: center;
     .underline{
