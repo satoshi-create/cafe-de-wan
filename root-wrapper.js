@@ -1,3 +1,13 @@
+/*
+=============== 
+TODO
+
+1.Navbar
+2.googlemap
+3.SEO
+===============
+*/
+
 import React from 'react'
 import { createGlobalStyle } from 'styled-components'
 import { GatsbyProvider } from './src/context/context'
