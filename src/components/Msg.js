@@ -24,7 +24,6 @@ const Msg = () => {
         <figure className="flame flame01">
           <StaticImage
             src="../images/cafe-interior.jpg"
-            layout="fullWidth"
             placeholder="tracedSVG"
             className="fig fig01"
             alt="cafe-interior"
@@ -33,7 +32,6 @@ const Msg = () => {
         <figure className="flame flame02">
           <StaticImage
             src="../images/cafeecup.jpg"
-            layout="fullWidth"
             imgStyle={{
               objectPosition: "100% 50%",
             }}
@@ -63,16 +61,19 @@ p{
       box-shadow: 1px 1px 5px rgba(20,20,20,0.2);
       overflow: hidden;
       margin-bottom: 40px;
+      max-width: 346px;
 }
 .flame01{
       grid-row: 4;
       z-index: 1;
       grid-column:  2 / 5;
+      justify-self: center;
       transform: rotate(18deg);
 }
 .flame02{
       grid-row: 4;
       grid-column:  1/4;
+      justify-self: center;
       transform: rotate(-25deg);
 }
 @media screen and (min-width: 768px) {
