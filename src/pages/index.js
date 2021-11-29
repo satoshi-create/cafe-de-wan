@@ -8,11 +8,13 @@ import Dogs from '../components/Dogs';
 import News from '../components/News';
 import Info from '../components/Info';
 import Modal from '../components/Modal';
+import Seo from '../components/Seo';
 
 
 const index = () => {
   return (
     <Layout>
+      <Seo title="Home" />
       <Hero />
       <Msg />
       <Dogs />
