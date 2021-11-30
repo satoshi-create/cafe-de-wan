@@ -106,7 +106,7 @@ const Wrapper = styled.section`
         }
       }
       .map {
-        width: 300px;
+        justify-self: stretch;
         height: 270px;
         border: 0;
       }
@@ -116,10 +116,9 @@ const Wrapper = styled.section`
           grid-column: 2/5;
         }
         .map {
-          width: 446px;
           height: 370px;
           grid-row: 1/3;
-          grid-column: span 5 / -2;
+          grid-column: span 6 / -1;
         }
       }
     }
