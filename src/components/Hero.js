@@ -4,9 +4,9 @@ import { StaticImage } from 'gatsby-plugin-image'
 import scrollIcon from "../images/scroll_icon.svg";
 
 
-const Hero = () => {
+const Hero = ({style}) => {
   return (
-    <Wrapper>
+    <Wrapper style={style}>
       <StaticImage
         src="../images/moal.jpg"
         layout="fullWidth"
@@ -30,7 +30,6 @@ const Hero = () => {
 
 const Wrapper = styled.section`
 position: relative;
-height: 100vh;
 margin-top: -7.5rem;
   .hero-img{
     height: 100%;
