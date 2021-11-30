@@ -40,12 +40,11 @@ const Info = () => {
             </p>
           </div>
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d4457899.205377941!2d140.047902!3d31.133560000000003!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x606ab9f47fa9b07d%3A0xd7cc98551e98903f!2z5pel5pys44CB44CSMTAwLTE3MDEg5p2x5Lqs6YO96Z2S44O25bO25p2R!5e1!3m2!1sja!2sus!4v1638258355239!5m2!1sja!2sus"
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10688.182471886095!2d139.76513435447183!3d32.45753703273307!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x606ab9fb3a849d39%3A0x25ef520be87f24c7!2z5bC-5bGx5bGV5pyb5YWs5ZyS!5e0!3m2!1sja!2sus!4v1638259013621!5m2!1sja!2sus"
+            className="map"
             allowfullscreen=""
             loading="lazy"
-            className="map"
           ></iframe>
-
         </div>
       </div>
     </Wrapper>
