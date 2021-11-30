@@ -1,7 +1,7 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react";
+import styled from "styled-components";
 import cafeExteriorImg from "../images/cafe-exterior.jpg";
-import { StaticImage } from 'gatsby-plugin-image'
+import { StaticImage } from "gatsby-plugin-image";
 
 const Info = () => {
   return (
@@ -31,31 +31,34 @@ const Info = () => {
           <div className="info-address">
             <h4>店舗情報</h4>
             <p>
-              〒100-1701<br />
-              東京都青ヶ島村<br />
-              0997-1234-5678<br />
+              〒100-1701
+              <br />
+              東京都青ヶ島村
+              <br />
+              0997-1234-5678
+              <br />
             </p>
           </div>
-          <StaticImage
-            src="../images/map.png"
-            placeholder="tracedSVG"
+          <iframe
             className="map"
-            alt="map-img"
-          />
+            loading="lazy"
+            allowfullscreen
+            src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJfbCpf_S5amARP5CYHlWYzNc&key=AIzaSyBRiKwZ-aJeR0h40xezb4VaW7w0rWPQrow"
+          ></iframe>
         </div>
       </div>
     </Wrapper>
-  )
-}
+  );
+};
 
 const Wrapper = styled.section`
-margin-top: 70px;
-position: relative;
-height: 750px;
-.bg{
-  height: 100%;
-}
-.partsGrid{
+  margin-top: 70px;
+  position: relative;
+  height: 750px;
+  .bg {
+    height: 100%;
+  }
+  .partsGrid {
     position: absolute;
     top: 0;
     left: 0;
@@ -68,52 +71,59 @@ height: 750px;
     display: grid;
     place-content: center;
     place-items: center;
-  .section-title{
-    text-align: center;
-    .underline{
-      margin: auto;
-      color: var(--clr-white);
-    }
-    }
-  .grid12{
-    row-gap: 30px;
-    h4{
-      font-family: var(--subtitle-font);
-      font-size: 18px;
-    }
-    dl{
-      font-size: 13px;
-      display: grid;
-      grid-template-columns: auto 1fr;
-      grid-column-gap: 20px;
-      margin-left: 30px;
-    }
-    p{
-      font-size: 13px;
-      margin-left: 30px;
-    }
-    .hours{
-      h4{
-        margin-bottom: 17px;
+    .section-title {
+      text-align: center;
+      .underline {
+        margin: auto;
+        color: var(--clr-white);
       }
     }
-    .info-address{
-      h4{
-        margin-bottom:26px;
+    .grid12 {
+      row-gap: 30px;
+      h4 {
+        font-family: var(--subtitle-font);
+        font-size: 18px;
       }
-    }
-    @media (min-width: 768px) {
-      .hours,
-      .info-address{
-        grid-column: 2/5;
+      dl {
+        font-size: 13px;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        grid-column-gap: 20px;
+        margin-left: 30px;
       }
-      .map{
-        grid-row: 1/3;
-        grid-column: span 5 / -2;
+      p {
+        font-size: 13px;
+        margin-left: 30px;
+      }
+      .hours {
+        h4 {
+          margin-bottom: 17px;
+        }
+      }
+      .info-address {
+        h4 {
+          margin-bottom: 26px;
+        }
+      }
+      .map {
+        width: 300px;
+        height: 270px;
+        border: 0;
+      }
+      @media (min-width: 768px) {
+        .hours,
+        .info-address {
+          grid-column: 2/5;
+        }
+        .map {
+          width: 446px;
+          height: 370px;
+          grid-row: 1/3;
+          grid-column: span 5 / -2;
+        }
       }
     }
   }
-}
-`
+`;
 
-export default Info
+export default Info;
