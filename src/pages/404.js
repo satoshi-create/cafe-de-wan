@@ -1,10 +1,12 @@
 import React from 'react'
 import Layout from "../components/Layout";
 import Hero from '../components/Hero';
+import Seo from "../components/Seo";
 
 const Error = () => {
   return (
     <Layout>
+      <Seo title="Error" />
       <Hero
       style={{ height: "60vh" }}
       />

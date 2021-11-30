@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import logo from "../images/logo.svg";
+import logo from "../images/logo.png";
 import styled from 'styled-components'
 
 const Navbar = () => {
