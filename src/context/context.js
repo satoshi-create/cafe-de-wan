@@ -7,16 +7,21 @@ const GatsbyProvider = ({ children }) => {
   const [isSidebar, setisSidebar] = useState(false);
   const [value, setValue] = useState(0);
 
-  console.log(isSidebar);
-
   const openModal = (i) => {
     setisModalOpen(true);
+    const clientWidth = document.body.clientWidth;
     document.querySelector("html").classList.add("open");
+    const noScrollBarWidth = document.body.clientWidth;
+    const diff = noScrollBarWidth - clientWidth;
+    if (diff > 0) {
+      document.body.style["padding-right"] = diff + "px";
+    }
     setValue(i);
   };
   const closeModal = () => {
-    setisModalOpen(false);
     document.querySelector("html").classList.remove("open");
+    document.body.style["padding-right"] = "0px";
+    setisModalOpen(false);
   };
 
   const openSidebar = () => {
@@ -39,6 +44,7 @@ const GatsbyProvider = ({ children }) => {
         isSidebar,
         openSidebar,
         closeSidebar,
+        
       }}
     >
       {children}

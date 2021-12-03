@@ -5,6 +5,7 @@ import links from "../constants/links";
 import socialLinks from "../constants/socialLInks";
 import { CgCloseR } from "react-icons/cg";
 import { GatsbyContext } from "../context/context";
+import nikukyuWhite from "../images/nikukyu-white.svg";
 
 const Sidebar = () => {
   const { closeSidebar} = useContext(GatsbyContext);
@@ -73,11 +74,18 @@ const Wrapper = styled.nav`
       display: grid;
       row-gap: 10px;
       justify-items: center;
+      position: relative;
       li {
         display: grid;
         grid-auto-flow: column;
         align-items: center;
         column-gap: 5px;
+      }
+      &::after {
+        content: url(${nikukyuWhite});
+        position: absolute;
+        bottom: -140px;
+        right: -30px;
       }
     }
     .sns {
