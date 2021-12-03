@@ -29,30 +29,30 @@ const Wrapper = styled.footer`
   height: 224px;
   display: grid;
   place-content: center;
-  .grid12{
+  .grid12 {
     row-gap: 20px;
     p {
-    color: var(--clr-white);
-    font-size: 13px;
-    align-self: end;
-    justify-self: center;
-    position: relative;
-    &::after {
-      content: url(${nikukyuWhite});
-      position: absolute;
-      bottom: -70px;
-      right: -30px;
+      color: var(--clr-white);
+      font-size: 13px;
+      align-self: end;
+      justify-self: center;
+      position: relative;
+      &::after {
+        content: url(${nikukyuWhite});
+        position: absolute;
+        bottom: -90px;
+        right: -40px;
+      }
     }
-  }
-  .sns {
-    display: grid;
-    grid-template-columns: repeat(3, 35px);
-    place-content: center;
-    place-items: center;
-    column-gap: 10px;
-    font-size: 25px;
-    color: var(--clr-orange);
-  }
+    .sns {
+      display: grid;
+      grid-template-columns: repeat(3, 35px);
+      place-content: center;
+      place-items: center;
+      column-gap: 10px;
+      font-size: 25px;
+      color: var(--clr-orange);
+    }
   }
 `;
 
