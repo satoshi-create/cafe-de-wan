@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import cafeExteriorImg from "../images/cafe-exterior.jpg";
 import { StaticImage } from "gatsby-plugin-image";
 
 const Info = () => {
@@ -69,8 +68,6 @@ const Wrapper = styled.section`
     background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
     color: var(--clr-white);
     display: grid;
-    place-content: center;
-    place-items: center;
     .section-title {
       text-align: center;
       .underline {
@@ -79,7 +76,8 @@ const Wrapper = styled.section`
       }
     }
     .grid12 {
-      row-gap: 30px;
+      align-items: center;
+      row-gap: 20px;
       h4 {
         font-family: var(--subtitle-font);
         font-size: 18px;
@@ -96,19 +94,22 @@ const Wrapper = styled.section`
         margin-left: 30px;
       }
       .hours {
+        align-self: flex-end;
         h4 {
           margin-bottom: 17px;
         }
       }
       .info-address {
+        align-self: flex-start;
         h4 {
           margin-bottom: 26px;
         }
       }
       .map {
         justify-self: stretch;
-        height: 270px;
+        height: 350px;
         border: 0;
+        margin: 0 -8vw;
       }
       @media (min-width: 768px) {
         .hours,
@@ -116,7 +117,7 @@ const Wrapper = styled.section`
           grid-column: 2/5;
         }
         .map {
-          height: 370px;
+          height: 500px;
           grid-row: 1/3;
           grid-column: span 6 / -1;
         }

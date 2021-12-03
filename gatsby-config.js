@@ -5,7 +5,7 @@ module.exports = {
     title: "cafe de wan",
     description: "犬と一緒にカフェを運営しています",
     lang: "ja",
-    url: "https://goofy-neumann-595c81.netlify.app/",
+    url: "https://cafe-de-wan.netlify.app",
   },
   plugins: [
     `gatsby-plugin-image`,
