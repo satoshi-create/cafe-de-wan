@@ -11,10 +11,12 @@ const GatsbyProvider = ({ children }) => {
 
   const openModal = (i) => {
     setisModalOpen(true);
+    document.querySelector("html").classList.add("open");
     setValue(i);
   };
   const closeModal = () => {
     setisModalOpen(false);
+    document.querySelector("html").classList.remove("open");
   };
 
   const openSidebar = () => {
