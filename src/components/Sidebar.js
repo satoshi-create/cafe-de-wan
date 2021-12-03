@@ -21,7 +21,7 @@ const Sidebar = () => {
             return (
               <li key={index}>
                 {icon}
-                <Link to={url}>{text}</Link>
+                <Link to={url} onClick={closeSidebar}>{text}</Link>
               </li>
             );
           })}
