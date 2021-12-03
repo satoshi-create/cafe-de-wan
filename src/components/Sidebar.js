@@ -7,7 +7,7 @@ import { CgCloseR } from "react-icons/cg";
 import { GatsbyContext } from "../context/context";
 
 const Sidebar = () => {
-  const { closeSidebar, isSidebar } = useContext(GatsbyContext);
+  const { closeSidebar} = useContext(GatsbyContext);
   return (
     <Wrapper>
       <aside className="sidebar">
@@ -30,7 +30,7 @@ const Sidebar = () => {
             const { url, icon } = item;
             return (
               <li key={index}>
-                <Link to={url}>{icon}</Link>
+                <Link to={url} onClick={closeSidebar}>{icon}</Link>
               </li>
             );
           })}
@@ -47,7 +47,7 @@ const Wrapper = styled.nav`
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #0000009c;
+  background-color: #000000c9;
   display: grid;
   place-content: center;
   .sidebar {
