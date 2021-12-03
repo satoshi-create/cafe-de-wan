@@ -4,13 +4,15 @@ import Footer from "./Footer";
 import Modal from "./Modal";
 import { GatsbyContext } from '../context/context'
 import "../css/main.css"
+import Sidebar from "./Sidebar";
 
 const Layout = ({ children }) => {
-  const { isModalOpen } = useContext(GatsbyContext)
+  const { isModalOpen,isSidebar } = useContext(GatsbyContext)
 
   return (
     <>
       <Navbar />
+      {isSidebar && <Sidebar/>}
       {children}
       <Footer />
       {isModalOpen && <Modal/>}

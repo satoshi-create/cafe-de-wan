@@ -1,18 +1,22 @@
-import React from "react";
+import React,{useContext} from "react";
 import { Link } from "gatsby";
 import logo from "../images/logo.png";
 import styled from "styled-components";
 import links from "../constants/links";
+import { BiMenuAltRight } from "react-icons/bi";
+import { GatsbyContext } from '../context/context'
 
 const Navbar = () => {
+  const { openSidebar } = useContext(GatsbyContext)
+
   return (
     <Wrapper>
       <div className="headerGrid">
         <nav className="nav grid12">
           <img src={logo} alt="logo" className="nav-logo" />
-          <Link to="/" className="btn nav-icon">
-            <button>nav</button>
-          </Link>
+          <button className="btn nav-icon" onClick={openSidebar}>
+            <BiMenuAltRight />
+          </button>
           <ul className="nav-menu">
             {links.map((item, index) => {
               const { text, url, icon } = item;
@@ -30,7 +34,7 @@ const Navbar = () => {
   );
 };
 
-const Wrapper = styled.nav`
+const Wrapper = styled.header`
   position: relative;
   z-index: 1;
   .headerGrid {
@@ -52,7 +56,11 @@ const Wrapper = styled.nav`
         }
       }
       .nav-icon {
-        grid-column: 4/-1;
+        font-size: 40px;
+        color: var(--clr-white);
+        grid-column: 4;
+        justify-self: flex-end;
+        align-self: center;
         @media (min-width: 768px) {
           display: none;
         }
@@ -74,9 +82,9 @@ const Wrapper = styled.nav`
             align-items: center;
             column-gap: 5px;
             transition: var(--transition);
-            :hover{
-            color: var(--clr-middle-orange);
-          }
+            :hover {
+              color: var(--clr-middle-orange);
+            }
           }
         }
       }

@@ -179,3 +179,9 @@ section styles
   opacity: 0.6;
   transition: var(--transition);
 }
+
+.open html,
+.open body{
+  overflow: hidden;
+  height: 100%;
+}
