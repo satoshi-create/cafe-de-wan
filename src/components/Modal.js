@@ -52,7 +52,7 @@ const Wrapper = styled.section`
     width: 90vw;
     height: 90vh;
     max-width: 800px;
-    background: var(--clr-light-orange);
+    background: var(--clr-skyblue);
     border-radius: 8px;
     padding: 20px;
     align-items: center;
