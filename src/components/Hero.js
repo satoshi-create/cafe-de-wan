@@ -21,6 +21,7 @@ const Hero = ({style}) => {
         <div className="grid12">
           <h1 className="A">CAFE DE</h1>
           <h1 className="B">WAN</h1>
+          <h1 className="C">NYAN</h1>
         </div>
       </div>
       <img src={scrollIcon} alt="scroll-icon" className="scroll-icon" />
@@ -58,15 +59,19 @@ margin-top: -7.5rem;
       transform: rotate(-22deg);
       padding-right: 140px;
     }
-    .B{
+    .B,.C{
       color: var(--clr-orange);
-      grid-row: 2;
       font-size: 61px;
-      transform: rotate(-36deg);
       padding-left:60px;
-      padding-top: 20px;
+      transform: rotate(-36deg);
       @media (min-width: 768px){
         font-size: 105px;
+    }
+    .B{
+      grid-row: 2;
+    }
+    .C{
+      grid-row: 3;
     }
     }
     @media (min-width: 1024px){

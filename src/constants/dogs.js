@@ -13,6 +13,8 @@ const dogs = [
   {
     id: 1,
     cat: "dog",
+    cls:"dog",
+    bln:true,
     set: [
       {
         id: 1,
@@ -71,6 +73,8 @@ const dogs = [
   {
     id: 1,
     cat: "cat",
+    cls:"cat",
+    bln:false,
     set: [
       {
         id: 1,

@@ -2,8 +2,8 @@ require("dotenv").config()
 
 module.exports = {
   siteMetadata: {
-    title: "cafe de wan",
-    description: "犬と一緒にカフェを運営しています",
+    title: "cafe de wan nyan",
+    description: "犬６匹と猫３匹とともに一緒にカフェを運営しています",
     lang: "ja",
     url: "https://cafe-de-wan.netlify.app",
   },

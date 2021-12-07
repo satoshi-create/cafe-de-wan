@@ -95,7 +95,7 @@ const Wrapper = styled.section`
       padding: 100px 0;
       @media (min-width: 768px) {
         column-gap: 40px;
-        padding: 150px;
+        padding: 150px 0;
       }
       .cat-btn {
         font-size: 60px;
@@ -126,27 +126,24 @@ const Wrapper = styled.section`
       .dog-fig:not(:first-child) {
         margin-top: -80px;
       }
-      .dog-fig:nth-child(2) {
-        grid-row: 3/4;
-        justify-self: flex-start;
-      }
       .dog-fig:nth-child(3) {
-        z-index: 2;
-        justify-self: center;
+        margin-left: 100px;
+        justify-self: flex-start;
       }
       .dog-fig:nth-child(4) {
         justify-self: flex-end;
       }
       .dog-fig:nth-child(5) {
-        grid-row: 6/7;
-        justify-self: flex-start;
-      }
-      .dog-fig:nth-child(6) {
         justify-self: center;
       }
+      .dog-fig:nth-child(6) {
+        justify-self: flex-start;
+      }
       .dog-fig:nth-child(7) {
-        margin-right: 70px;
         justify-self: flex-end;
+      }
+      .dog-fig:nth-child(8) {
+        justify-self: center;
       }
     }
     &:before {
@@ -190,6 +187,11 @@ const Wrapper = styled.section`
     border-radius: 50%;
     border: 8px solid white;
     box-shadow: 1px 1px 5px rgba(20, 20, 20, 0.2);
+    @media (min-width: 1088px) {
+      width: 250px;
+      height: 250px;
+      top: 30px;
+    }
   }
   .wave-top {
     grid-column: 1/-1;

@@ -6,7 +6,7 @@ const content = () => {
   return (
     <Layout>
       <Seo title="Contents" />
-      content page
+     content page
     </Layout>
   )
 }

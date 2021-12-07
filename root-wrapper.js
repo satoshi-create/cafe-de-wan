@@ -9,7 +9,6 @@ TODO
 import React from 'react'
 import { createGlobalStyle } from 'styled-components'
 import { GatsbyProvider } from './src/context/context'
-import nikukyu from "./src/images/nikukyu-orange.svg"
 
 // const GlobalStyle = createGlobalStyle`
 
