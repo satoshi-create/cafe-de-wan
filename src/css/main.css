@@ -172,7 +172,6 @@ section styles
 .btn{
   border: none;
   background: none;
-  justify-self: flex-start;
   cursor: pointer;
   display: inline-block;
 }

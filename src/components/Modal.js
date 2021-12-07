@@ -7,8 +7,11 @@ import siteTitle from "../images/site-title.svg";
 import nikukyuOrange from "../images/nikukyu-orange.svg";
 
 const Modal = () => {
-  const { closeModal, value } = useContext(GatsbyContext);
-  const { src, name, age, gender, persona } = dogs[value];
+  const { closeModal, value, catIndex } = useContext(GatsbyContext);
+  const { set } = dogs[catIndex];
+  const { id, name, src, age, gender, persona } = set[value];
+  console.log(dogs[value]);
+  console.log(set[value]);
   return (
     <Wrapper>
       <div className="MuiBackdrop-root" onClick={closeModal}></div>
@@ -123,11 +126,11 @@ const Wrapper = styled.section`
       right: -20px;
     }
     &::after {
-        content: url(${nikukyuOrange});
-        position: absolute;
-        bottom: 10px;
-        right: 10px;
-      }
+      content: url(${nikukyuOrange});
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+    }
   }
 `;
 

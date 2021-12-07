@@ -6,6 +6,7 @@ const GatsbyProvider = ({ children }) => {
   const [isModalOpen, setisModalOpen] = useState(false);
   const [isSidebar, setisSidebar] = useState(false);
   const [value, setValue] = useState(0);
+  const [catIndex, setCatIndex] = useState(0)
 
   const openModal = (i) => {
     setisModalOpen(true);
@@ -18,6 +19,7 @@ const GatsbyProvider = ({ children }) => {
     }
     setValue(i);
   };
+  console.log(value);
   const closeModal = () => {
     document.querySelector("html").classList.remove("open");
     document.body.style["padding-right"] = "0px";
@@ -44,7 +46,8 @@ const GatsbyProvider = ({ children }) => {
         isSidebar,
         openSidebar,
         closeSidebar,
-        
+        catIndex,
+         setCatIndex
       }}
     >
       {children}
