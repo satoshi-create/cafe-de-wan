@@ -81,7 +81,7 @@ const Dogs = () => {
 
 const Wrapper = styled.section`
   background-color: var(--clr-light-orange);
-  padding: 125px 0 454px 0;
+  padding: 145px 0 534px 0;
   position: relative;
   overflow: hidden;
   .grid12 {
@@ -92,13 +92,25 @@ const Wrapper = styled.section`
       display: grid;
       grid-auto-flow: column;
       column-gap: 10px;
+      padding: 100px 0;
       @media (min-width: 768px) {
-        justify-self: flex-start;
+        column-gap: 40px;
+        padding: 150px;
       }
       .cat-btn {
-        font-size: 20px;
+        font-size: 60px;
+        color: var(--clr-black);
+        font-family: var(--site-font);
+        text-transform: capitalize;
+        line-height: 1.5;
+        :hover {
+          box-shadow: 0 4px var(--clr-orange);
+          color: var(--clr-orange);
+        }
+      }
+      .active-btn {
+        box-shadow: 0 4px var(--clr-orange);
         color: var(--clr-orange);
-        font-family: var(--subtitle-font);
       }
     }
     .dog-fig {
@@ -154,7 +166,7 @@ const Wrapper = styled.section`
       content: url(${asiato});
       display: block;
       position: absolute;
-      bottom: -90px;
+      bottom: -160px;
       left: 0;
     }
   }

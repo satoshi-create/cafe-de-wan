@@ -5,6 +5,9 @@ import sasuke from "../images/sasuke.jpg";
 import hiro from "../images/hiro.jpg";
 import reika from "../images/reika.jpg";
 import weed from "../images/weed.jpeg";
+import haku from "../images/haku.jpg";
+import monbou from "../images/monbou.jpg";
+import yume from "../images/yume.jpg";
 
 const dogs = [
   {
@@ -71,29 +74,29 @@ const dogs = [
     set: [
       {
         id: 1,
-        name: "モール",
-        src: moal,
-        age: "約3ヶ月",
+        name: "ハク",
+        src: haku,
+        age: "約6ヶ月",
         gender: "男の子",
         persona:
-          "最初は犬見知りがあり、慣れるまで唸ってみせますが、すぐになれ、大人犬さんたちが嫌がるほど、本気ダッシュでおいかけまわすワンパクBOY♡",
+          "マイペースな猫ちゃんです。周りが騒がしいときでもあわてません。じっくりと様子をうかがっています。撫でられるとゴロゴロのどを鳴らします♡",
       },
       {
         id: 2,
-        name: "GB",
-        src: gb,
-        age: "約2歳",
+        name: "モンボウ",
+        src: monbou,
+        age: "約1歳",
         gender: "男の子",
         persona:
-          "遊ぶのもお散歩も大好きな男の子。 元気いっぱいで好奇心も旺盛です☆",
+          "喧嘩が大好きで、ワンちゃんにも平然と立ち向かいます。生傷が絶えませんが、頼もしアニキです",
       },
       {
         id: 3,
-        name: "佐助",
-        src: sasuke,
-        age: "1年",
-        gender: "男の子",
-        persona: "人懐っこい甘えん坊です。",
+        name: "ユメ",
+        src: yume,
+        age: "約3ヶ月",
+        gender: "女の子",
+        persona: "まだ人見知りをしますが。好奇心旺盛です。狭いところが大好きで、ときどき出てこれなくなります。",
       },
     ],
   },
