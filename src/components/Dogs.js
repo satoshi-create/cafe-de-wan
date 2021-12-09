@@ -49,7 +49,7 @@ const Dogs = () => {
                 onClick={() => openModal(index)}
                 key={id}
               >
-                <Img src={src} alt={name} className="dog-img" test={clr} />
+                <Img src={src} alt={name} className="dog-img" clr={clr} />
                 {/* <img src={src} alt={name} className="dog-img" test={test} /> */}
               </button>
               {/* <P test={test}>テスト</P> */}
@@ -91,7 +91,7 @@ const Dogs = () => {
 const Img = styled.img`
   /* border:8px solid ${(props) => props.test}; */
   border: 4px solid #c21500;
-  border-image: ${(props) => props.test};
+  border-image: ${(props) => props.clr};
   border-image-slice: 1;
 `;
 

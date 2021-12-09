@@ -10,7 +10,7 @@ import nikukyuBlue from "../images/nikukyu-blue.svg";
 const Modal = () => {
   const { closeModal, value, catIndex,isModalOpen } = useContext(GatsbyContext);
   const { cls, cat, set,bln } = dogs[catIndex];
-  const { id, name, src, age, gender, persona } = set[value];
+  const { id, name, src,clr, age, gender, persona } = set[value];
   
 
   return (
@@ -21,7 +21,8 @@ const Modal = () => {
           <FaTimes />
         </button>
         <h4>{`cafe de ${cat}`}</h4>
-        <img src={src} alt={name} />
+        <Img src={src} alt={name} clr={clr} />
+        {/* <img src={src} alt={name} /> */}
         <dl className="grid12">
           <dt>名前</dt>
           <dd>{name}</dd>
@@ -42,6 +43,12 @@ const Modal = () => {
     </Wrapper>
   );
 };
+
+const Img = styled.img`
+  border: 4px solid #c21500;
+  border-image: ${(props) => props.clr};
+  border-image-slice: 1;
+`
 
 const Wrapper = styled.section`
   position: fixed;
