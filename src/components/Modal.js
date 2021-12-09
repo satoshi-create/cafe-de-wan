@@ -8,14 +8,13 @@ import nikukyuOrange from "../images/nikukyu-orange.svg";
 import nikukyuBlue from "../images/nikukyu-blue.svg";
 
 const Modal = () => {
-  const { closeModal, value, catIndex } = useContext(GatsbyContext);
+  const { closeModal, value, catIndex,isModalOpen } = useContext(GatsbyContext);
   const { cls, cat, set,bln } = dogs[catIndex];
   const { id, name, src, age, gender, persona } = set[value];
   
-  const [bold, setBold] = useState(false);
 
   return (
-    <Wrapper>
+    <Wrapper clicked ={isModalOpen}> 
       <div className="MuiBackdrop-root" onClick={closeModal}></div>
       <div className={`modal-container grid12 ${cls}`}>
         <button className="btn btn-close" onClick={closeModal}>
@@ -51,6 +50,8 @@ const Wrapper = styled.section`
   display: grid;
   place-items: center;
   transition: var(--transition);
+  transform: scale(0,0);
+  transform: scale(${({ clicked }) => clicked && (1,1) });
   .MuiBackdrop-root {
     position: fixed;
     inset: 0px;
