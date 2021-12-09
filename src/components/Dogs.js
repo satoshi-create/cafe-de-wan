@@ -1,11 +1,11 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
-import { StaticImage } from "gatsby-plugin-image";
 import fukidashiSp from "../images/fukidashi-sp.svg";
 import fukidashiPc from "../images/fukidashi-pc.svg";
 import { GatsbyContext } from "../context/context";
 import dogs from "../constants/dogs";
 import asiato from "../images/asiato.svg";
+import ButtonNikukyu from "./ButtonNikukyu"
 
 const Dogs = () => {
   const { openModal, catIndex, setCatIndex } = useContext(GatsbyContext);
@@ -48,6 +48,7 @@ const Dogs = () => {
             </button>
           );
         })}
+        <ButtonNikukyu/>
       </div>
       <div class="custom-shape-divider-top-1636126753">
         <svg
