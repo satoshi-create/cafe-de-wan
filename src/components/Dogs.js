@@ -5,7 +5,11 @@ import fukidashiPc from "../images/fukidashi-pc.svg";
 import { GatsbyContext } from "../context/context";
 import dogs from "../constants/dogs";
 import asiato from "../images/asiato.svg";
-import ButtonNikukyu from "./ButtonNikukyu"
+import ButtonNikukyu from "./ButtonNikukyu";
+
+// const test = {
+//   clr: "red",
+// };
 
 const Dogs = () => {
   const { openModal, catIndex, setCatIndex } = useContext(GatsbyContext);
@@ -37,18 +41,22 @@ const Dogs = () => {
           })}
         </div>
         {set.map((item, index) => {
-          const { id, name, src } = item;
+          const { id, name, src,clr } = item;
           return (
-            <button
-              className="btn dog-fig"
-              onClick={() => openModal(index)}
-              key={id}
-            >
-              <img src={src} alt={name} className="dog-img" />
-            </button>
+            <>
+              <button
+                className="btn dog-fig"
+                onClick={() => openModal(index)}
+                key={id}
+              >
+                <Img src={src} alt={name} className="dog-img" test={clr} />
+                {/* <img src={src} alt={name} className="dog-img" test={test} /> */}
+              </button>
+              {/* <P test={test}>テスト</P> */}
+            </>
           );
         })}
-        <ButtonNikukyu/>
+        <ButtonNikukyu />
       </div>
       <div class="custom-shape-divider-top-1636126753">
         <svg
@@ -79,6 +87,13 @@ const Dogs = () => {
     </Wrapper>
   );
 };
+
+const Img = styled.img`
+  /* border:8px solid ${(props) => props.test}; */
+  border: 4px solid #c21500;
+  border-image: ${(props) => props.test};
+  border-image-slice: 1;
+`;
 
 const Wrapper = styled.section`
   background-color: var(--clr-light-orange);
@@ -185,8 +200,9 @@ const Wrapper = styled.section`
   .dog-img {
     width: 190px;
     height: 190px;
-    border-radius: 50%;
-    border: 8px solid white;
+    /* border-radius: 50%; */
+    /* border: 8px solid; */
+    /* border:${(props) => props.test.clr}; */
     box-shadow: 1px 1px 5px rgba(20, 20, 20, 0.2);
     @media (min-width: 1088px) {
       width: 250px;

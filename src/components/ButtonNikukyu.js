@@ -37,7 +37,7 @@ const ButtonStyledFirst = styled("button")`
   background-position: center;
   border: none;
   background-image: url(${({ clicked }) =>
-    clicked % 2 == 0 ? theme.fg : theme.bg});
+    clicked % 2 == 0 ? theme.bg : theme.fg});
 `;
 
 export default ButtonNikukyu;
