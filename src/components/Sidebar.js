@@ -56,8 +56,11 @@ const Wrapper = styled.div`
   place-content: center;
   background-color: #0000008f;
   transition: var(--transition);
-  transform: translateX(100%);
-  transform: translateX(${({ clicked }) => clicked && 0 });
+  /* transform: translateX(100%);
+  transform: translateX(${({ clicked }) => clicked && 0 }); */
+  transform-origin: top right;
+  transform: scale(0,0);
+  transform: scale(${({ clicked }) => clicked && (1,1) });
   .sidebar {
     width: 90vw;
     height: 90vh;
