@@ -12,7 +12,8 @@ const Layout = ({ children }) => {
   return (
     <>
       <Navbar />
-      {isSidebar && <Sidebar/>}
+      <Sidebar/>
+      {/* {isSidebar && <Sidebar/>} */}
       {children}
       <Footer />
       {isModalOpen && <Modal/>}

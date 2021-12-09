@@ -1,13 +1,13 @@
 import React from 'react'
 import Layout from '../components/Layout'
 import Seo from "../components/Seo";
-import Test from "../styled-component/Test";
+import App from "../styled-component/jump-rate-generator/App";
 
 const content = () => {
   return (
     <Layout>
       <Seo title="Contents" />
-     <Test/>
+     <App/>
     </Layout>
   )
 }

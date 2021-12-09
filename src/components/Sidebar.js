@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { Link } from "gatsby";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import links from "../constants/links";
 import socialLinks from "../constants/socialLInks";
 import { CgCloseR } from "react-icons/cg";
@@ -8,9 +8,9 @@ import { GatsbyContext } from "../context/context";
 import nikukyuWhite from "../images/nikukyu-white.svg";
 
 const Sidebar = () => {
-  const { closeSidebar} = useContext(GatsbyContext);
+  const { closeSidebar, isSidebar } = useContext(GatsbyContext);
   return (
-    <Wrapper>
+    <Wrapper clicked={isSidebar}>
       <aside className="sidebar">
         <button className="btn close-btn" onClick={closeSidebar}>
           <CgCloseR />
@@ -21,7 +21,9 @@ const Sidebar = () => {
             return (
               <li key={index}>
                 {icon}
-                <Link to={url} onClick={closeSidebar}>{text}</Link>
+                <Link to={url} onClick={closeSidebar}>
+                  {text}
+                </Link>
               </li>
             );
           })}
@@ -31,7 +33,9 @@ const Sidebar = () => {
             const { url, icon } = item;
             return (
               <li key={index}>
-                <Link to={url} onClick={closeSidebar}>{icon}</Link>
+                <Link to={url} onClick={closeSidebar}>
+                  {icon}
+                </Link>
               </li>
             );
           })}
@@ -41,16 +45,19 @@ const Sidebar = () => {
   );
 };
 
-const Wrapper = styled.nav`
+const Wrapper = styled.div`
   z-index: 555;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #000000c9;
   display: grid;
   place-content: center;
+  background-color: #0000008f;
+  transition: var(--transition);
+  transform: translateX(100%);
+  transform: translateX(${({ clicked }) => clicked && 0 });
   .sidebar {
     width: 90vw;
     height: 90vh;
